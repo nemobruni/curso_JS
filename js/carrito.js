@@ -10,10 +10,10 @@ export function addToCart(item, quantity = 1) {
     });
     localStorage.setItem("carrito", JSON.stringify(newCart));
     Swal.fire({
-      title: "Error!",
-      text: "Do you want to continue",
-      icon: "error",
-      confirmButtonText: "Cool",
+      title: "Exito!",
+      text: "Agregaste un producto al carrito!",
+      icon: "success",
+      confirmButtonText: "Genial!",
     });
     console.log("Cart created successfully");
     return "Cart created successfully";
@@ -26,10 +26,10 @@ export function addToCart(item, quantity = 1) {
     localStorage.setItem("carrito", JSON.stringify(currentCart));
     console.log("Cart updated successfully");
     Swal.fire({
-      title: "putp",
-      text: "Do you want to continue",
-      icon: "error",
-      confirmButtonText: "Cool",
+      title: "Exito!",
+      text: "Agregaste un producto al carrito!",
+      icon: "success",
+      confirmButtonText: "Genial!",
     });
     return "Cart updated successfully";
   }
