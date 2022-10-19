@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background-image: url("https://s1.1zoom.me/big0/679/Autumn_Dogs_Foliage_Run_Welsh_Corgi_Bokeh_571783_1280x853.jpg");
+    background-size: cover;
+}

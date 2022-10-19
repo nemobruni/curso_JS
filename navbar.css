@@ -1,0 +1,248 @@
+
+
+/*voy a copiar aca un import que es de google font(un tipo de letra) para que me aparezca en los titulos que yo quiera*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:ital@1&family=Petit+Formal+Script&family=Roboto:ital,wght@1,300&display=swap');
+
+
+/* A continuacion, voy a darle colores y forma al navbar */
+
+*{
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*____ BODY _____*/
+body{
+    background-image: url("https://thumbs.dreamstime.com/b/funny-puppy-dog-corgi-fluffy-cat-catch-butterflies-sunny-summer-garden-next-to-bouquet-flowers-235560142.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*_____ HEADER ________*/
+
+header h1{
+    text-align: center;
+    padding: 40px;
+    font-family: 'Petit Formal Script', cursive; /*aca agregue la fuente que quiero que tenga mi titulo, lo copiede google font*/
+    font-size: 4rem;
+}
+
+/*____ NAVBAR _____*/
+
+
+nav{
+    background: rgba(255, 192, 203, 0.212);
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color:white;
+    font-size: 20px;
+    padding: 7px 15px;
+    border-radius: 3px;
+    /* text-transform: uppercase; --> esto convierte a las palabras en mayusculas */
+}
+
+nav > ul > li a.active_menu, li a:hover{
+    background: rgb(6, 90, 6);
+    transition: .5s;
+}
+
+nav > .check_boton_menu{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav > .logo{
+    color: white;
+    font-size: 50px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:lighter;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+nav > #check_input_menu{
+    display: none;
+}
+
+
+
+/* ___ RESPONSIVE TABLET  NAVBAR ___*/
+
+@media (min-width: 1024px){
+    nav > .logo{
+        
+        font-size: 40px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav ul li a{
+        
+        padding: 0 3px;
+        }
+}
+
+
+@media (max-width: 960px){
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    nav ul li a{
+        
+        padding: 0 3px;
+        }
+
+    nav > .logo{
+        
+        font-size: 40px;
+       
+    }
+
+    }
+
+
+   
+
+
+/* ___ RESPONSIVE CELULAR  NAVBAR___*/
+
+@media (max-width: 850px){
+    nav > .check_boton_menu{
+        display: block;
+    }
+
+    nav > ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #e28000;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    nav > ul > li a.active, li a:hover{
+        background: none;
+        color: white;
+    }
+
+    nav > #check_input_menu:checked ~ ul{
+        left: 0;
+    }
+}
+
+@media(max-width: 540px){
+    nav > .logo{
+        
+        font-size: 30px;
+       
+    }
+}
+
+
+
+@media (max-width: 450px){
+    
+
+    nav > .logo{
+        font-size: 30px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 400px){
+
+    nav > .logo{
+        font-size: 25px;
+        padding-left: 16px;
+    }
+    
+}
+
+@media (max-width: 360px){
+
+    nav > .check_boton_menu{
+        font-size: 20px;
+        
+    }
+     /*___ ACTIVE NAVBAR___*/
+
+     nav > ul > li a.active_menu, li a:hover{
+        background: rgb(6, 90, 6);
+        transition: .5s;
+    }
+
+    nav > label > #check_input_menu:checked ~ ul{
+
+        left:0;
+    }
+
+    }
+
+    @media (max-width: 280px){
+
+        nav >  .check_boton_menu{
+            font-size: 16px;
+            
+        }
+
+        nav > .logo{
+            font-size: 14px;
+            
+        }
+
+        /*___ ACTIVE NAVBAR___*/
+
+        nav > li a.active_menu, li a:hover{
+            background: rgb(6, 90, 6);
+            transition: .5s;
+        }
+
+        nav > #check_input_menu:checked ~ ul{
+
+            left:0;
+        }
+    
+        }

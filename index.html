@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="navbarjs.js" defer></script>
+    <script type="module" src="productos_funciones.js" defer></script>
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="productos_estilos.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Inicio - navbar -->
+
+      <div class="navbar_background">
+        <nav>
+          <input type="checkbox" id="check_input_menu" />
+          <label for="check" class="check_boton_menu">
+            <i class="fas fa-bars"></i>
+          </label>
+          <label class="logo"> Agreeable Friends</label>
+          <ul>
+            <li><a class="active_menu" href="#header_inicio">Inicio</a></li>
+            <li><a href="#titulo_productos">Productos</a></li>
+            <li><a href="#titulo_carrito">Haga su compra</a></li>
+            <li><a href="#formulario_datos">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Final - navbar -->
+
+      <h1>
+        Titulo de <br />
+        la pagina
+      </h1>
+    </header>
+
+
+    
+
+   
+      
+    <div id="cuadro_cards_fondo">
+      <div id="titulo_productos"><h1>Nuestros Productos!</h2></div>
+      
+      <main id="cuadro_de_productos"></main>
+    </div>
+
+
+
+    <div id="fondo_carrito">
+    <div id="titulo_carrito"><h1>Pedidos!</h2></div>
+    <p id="carrito_cart">
+      <cart
+        ></cart
+      >
+    </p>
+
+    <br>
+    <div id='boton_ok'><button id="boton_positivo">Si, lo compro!!</button>
+
+
+    </div>
+
+    <div id="boton_no">
+    <button id="boton_negativo">No, borrar</button></div>
+  </div>
+    
+    
+      <div id="fondo_formulario">
+    <div id="titulo_formulario"><h1>Completa tus datos para entregar a domicilio tus compras!</h2></div>
+
+    <section id="formulario_datos">
+      <form>
+        <fieldset>
+        
+       
+        
+        <input class="letra_form" type="text" name="name" placeholder="Nombre y Apellido"/>
+        <br>
+        <input class="letra_form" type="text" name="adress" placeholder="Dirección"/>
+        <br>
+        <input class="letra_form" type="number"  name="number" placeholder="Teléfono" />
+        <br>
+        <input id="boton_input" type="button" value="Aceptar"/>
+        <br>
+        
+        
+
+        </fieldset>
+        </form>
+
+      </div>
+
+
+
+
+
+    </section>
+    <footer id="footer">
+      <h5>Contacto:</h5>
+      <span>E-mail : Cosme_fulanito@gmail.com</span>
+      <span>Tel: +54 1169852334</span>
+    </footer>
+  </body>
+</html>
