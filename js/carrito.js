@@ -9,6 +9,9 @@ export function addToCart(item, quantity = 1) {
       quantity,
     });
     localStorage.setItem("carrito", JSON.stringify(newCart));
+    
+   
+    
     Swal.fire({
       title: "Exito!",
       text: "Agregaste un producto al carrito!",
@@ -25,9 +28,12 @@ export function addToCart(item, quantity = 1) {
     });
     localStorage.setItem("carrito", JSON.stringify(currentCart));
     console.log("Cart updated successfully");
+    
+    
     Swal.fire({
-      title: "Exito!",
-      text: "Agregaste un producto al carrito!",
+      position: 'top-end',
+      title: "Producto agregado al carrito!",
+      
       icon: "success",
       confirmButtonText: "Genial!",
     });
@@ -75,3 +81,31 @@ let ejemploCarrito = [
     quantity: "5",
   },
 ];
+
+
+export function obtenerTotal(array) {
+  console.log(array)
+  let total = 0;
+
+  array.forEach((elemento) => {
+    let cuentaActual = elemento.quantity * elemento.item.price;
+
+    total = total + cuentaActual;
+  });
+
+  return total;
+}
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
