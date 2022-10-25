@@ -11,7 +11,7 @@ const formatMoney = (num) => {
 };
 
 async function getData() {
-  let res = await fetch("https://api.npoint.io/fe06d9b63dc01f2e9bed");
+  let res = await fetch("https://api.npoint.io/1e5046e0613a6c4d662f");
   let photos = await res.json();
 
   photos.forEach((p) => {
@@ -55,6 +55,9 @@ async function getData() {
     let subtitulo = document.createElement("h4");
     subtitulo.textContent = p.description;
 
+    let parrafoCardPrecio = document.createElement("p")
+    parrafoCardPrecio.className = "parrafoCard_precio"
+
     let cardPrecio = document.createElement("p");
     cardPrecio.className = "card_precio";
 
@@ -65,10 +68,11 @@ async function getData() {
     cardText.className = "card_text";
 
     cardPrecio.append(precio);
+    parrafoCardPrecio.append(cardPrecio) 
     cardText.append(titulo, subtitulo);
     animal.append(quantityInput);
     animal.append(comprar);
-    card.append(animal, img, cardText, cardPrecio);
+    card.append(animal, img, cardText, parrafoCardPrecio);
     /*aca le digo a card que le voy a agregar hijos. Estos hijos seran img y titulo, justo en ese orden*/
     main.append(card);
 

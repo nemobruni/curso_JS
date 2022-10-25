@@ -179,6 +179,15 @@ nav > #check_input_menu{
         font-size: 30px;
        
     }
+
+
+    header h1{
+               
+        padding: 40px  120px;
+
+        font-family: 'Petit Formal Script', cursive; /*aca agregue la fuente que quiero que tenga mi titulo, lo copiede google font*/
+        font-size: 3rem;
+    }
 }
 
 
@@ -189,6 +198,12 @@ nav > #check_input_menu{
     nav > .logo{
         font-size: 30px;
         padding-left: 16px;
+    }
+
+    nav{
+        background: rgba(255, 192, 203, 0.212);
+        height: 80px;
+        width: 125%;
     }
 }
 
@@ -219,6 +234,13 @@ nav > #check_input_menu{
         left:0;
     }
 
+
+    nav{
+        background: rgba(255, 192, 203, 0.212);
+        height: 80px;
+        width: 145%;
+    }
+
     }
 
     @media (max-width: 280px){
@@ -229,7 +251,7 @@ nav > #check_input_menu{
         }
 
         nav > .logo{
-            font-size: 14px;
+            font-size: 35px;
             
         }
 
@@ -243,6 +265,21 @@ nav > #check_input_menu{
         nav > #check_input_menu:checked ~ ul{
 
             left:0;
+        }
+
+        nav{
+            background: rgba(255, 192, 203, 0.212);
+            height: 80px;
+            width: 185%;
+        }
+
+
+        header h1{
+            
+            padding: 40px  120px;
+
+            font-family: 'Petit Formal Script', cursive; /*aca agregue la fuente que quiero que tenga mi titulo, lo copiede google font*/
+            font-size: 3rem;
         }
     
         }

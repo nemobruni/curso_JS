@@ -8,28 +8,38 @@
 
 #cuadro_cards_fondo {
   margin-top: 55vh;
-  padding: 10px 150px;
-}
+  padding: 0.5px 250px;
+  
+   }
 
 /*___ TITULO DE PRODUCTOS __*/
 
 #titulo_productos{
-    background-color: rgba(255, 192, 203, 0.287);
-    color: white;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
-    font-family:'Times New Roman', Times, serif;
-    font-style: italic;
+  background-color: rgba(255, 192, 203, 0.287);
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
+    
 }
 
 /*Aca voy a llamar a main para darle forma grid a los productos/cartas*/
 
 main {
+  
   display: grid;
+  height: 20%;
   grid-template-columns: 1fr 1fr 1fr; /*determina en cuantas partes se divide el grid*/
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  
+  
+  justify-content: center;
   gap: 30px; /*determina el espacio entre las img*/
-  padding: 70px; /*determina el espacio del lado izq y der entre el div y las img*/
+  padding: 100px 2px; /*determina el espacio del lado izq y der entre el div y las img*/
+  
+  
 }
 
 /*_______TARJETAS DE LAS IMAGENES / FOTOS __________*/
@@ -38,12 +48,14 @@ main {
 
 .card {
   width: 100%; /*ocupa 100% del div que encierra a la img*/
+  height: 60%;
   border: 4px solid black; /*remarca o le da bordes a las img*/
   border-radius: 7px; /*le da una forma redondeada a los bordes*/
   box-shadow: 10px 10px 10px black; /*le da sombra a las cajitas*/
   transition: all 1.1s; /*aca remarco la idea de que si tiene el efecto hiver, tarde 0.2s para reacionar y asi moverse lentamente*/
   background-color: white;
   position: relative;
+  
 }
 
 .card:hover {
@@ -60,7 +72,7 @@ main {
 }
 
 .card > .tipo_de_animal {
-  /*___tipo de animal fue reemplazado por boton __*/
+  /*___tipo de animal fue reemplazado por boton "Comprar" __*/
   background-color: rgba(255, 166, 0, 0.323);
   text-align: center;
   padding: 10px 0;
@@ -68,14 +80,17 @@ main {
 /*Aca llamo al hijo de card(que es img) para hablar especificamente de el y darle forma*/
 
 .card > img {
-  width: 100%;
-  height: 60%;
+  width: 70%;
+  height: 55%;
   text-align: center;
+  
 }
 
 .card > .card_text {
+  display: grid;
   grid-area: text;
-  margin: 25px;
+  margin: 2px;
+  
   text-align: center;
 }
 
@@ -84,14 +99,14 @@ main {
 .card > .card_text > h3 {
   color: black;
   margin-top: 0px;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 
   /* padding: 5px 10px; */ /*el 1mer valor indica el espacio vertical y el 2do valor indica el espacio a los costados*/
 }
 
 .card > .card_text > h4 {
   color: grey;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 200;
 }
 /*Bueno. Ahora vuelvo al html y repiro el div de img 3 veces dentro del main para tener 3 img*/
@@ -104,15 +119,19 @@ main {
 
 /*___  PRECIO  ____*/
 
-.card > .card_precio {
+.card > .parrafoCard_precio {
   background-color: orange;
+  position: relative;
+  top: 1%;
+  
+
 }
 
-.card > .card_precio h2 {
+.card > .parrafoCard_precio h2 {
   color: red;
   text-align: center;
-  padding: 20px 0;
-  font-size: 2.5rem;
+  
+  font-size: 1.3rem;
 }
 
 .card > .tipo_de_animal > .boton_comprar {
@@ -252,6 +271,7 @@ main {
     justify-content: center;
     font-family:'Times New Roman', Times, serif;
     font-style: italic;
+    
 }
 
 #formulario_datos {
@@ -298,6 +318,28 @@ main {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*_____ MEDIA QUERYS DE CARTAS _______*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -307,7 +349,7 @@ main {
   }
 
   .card > h2 {
-    color: blue;
+    
     text-align: center;
     padding: 5px 0;
     font-size: 1.5rem;
@@ -358,7 +400,7 @@ main {
 
   .card > h2 {
     /*___ PRECIO ___*/
-    color: purple;
+    
     text-align: center;
     padding: 5px 0;
     font-size: 1.5rem;
@@ -369,12 +411,12 @@ main {
     text-align: center;
     padding: 3px 5px;
     font-size: 0.9rem;
-    color: green;
+    
   }
 
   /*___ TITULO DEL PRODUCTO ___*/
   .card > h3 {
-    color: brown;
+    
     text-align: center;
     font-size: 0.9rem;
     padding: 5px 10px; /*el 1mer valor indica el espacio vertical y el 2do valor indica el espacio a los costados*/
@@ -393,6 +435,7 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     height: 50%;
+    
   }
 
   /*___ TEXTO DESCRIPTIVO DEL PRODUCTO*/
@@ -400,12 +443,12 @@ main {
     text-align: center;
     padding: 3px 5px;
     font-size: 0.9rem;
-    color: cornflowerblue;
+    
   }
 
   /*___ TITULO ___*/
   .card > h3 {
-    color: brown;
+    
     font-size: 1.3rem;
     padding: 5px 10px; /*el 1mer valor indica el espacio vertical y el 2do valor indica el espacio a los costados*/
   }
@@ -414,10 +457,14 @@ main {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   main {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr  ;
+    gap: 20px;
     height: 50%;
+    
+   
   }
+
+
 
   /*___ IMAGEN DE LA CARTA ___*/
   .card > img {
@@ -429,9 +476,11 @@ main {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   main {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
-    height: 30%;
+    grid-template-columns: 1fr 1fr 1fr ;
+    
+    gap: 30px;
+    height: 50%;
+    width: 100%;
   }
 
   /*___ IMAGEN DE LA CARTA ___*/
@@ -444,6 +493,137 @@ main {
     text-align: center;
     padding: 3px 5px;
     font-size: 1rem;
-    color: black;
+    
   }
+}
+
+
+@media only screen and (max-width: 1200px){
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr ;
+    
+    gap: 30px;
+    height: 50%;
+    width: 100%;
+  }
+
+  #cuadro_cards_fondo {
+    
+    margin: 250px 0px;
+    
+     }
+
+
+     .card {
+      width: 100%; /*ocupa 100% del div que encierra a la img*/
+      height: 70%;
+    }
+    
+    
+
+}
+
+@media only screen and (max-width: 1160px){
+  
+
+  .card {
+    width: 110%; /*ocupa 100% del div que encierra a la img*/
+    height: 80%;
+   
+    
+  }
+
+  #cuadro_cards_fondo {
+    
+    padding: 0.5px 150px;
+    
+     }
+
+     main {
+      
+      gap: 50px;
+      
+    }
+  
+
+ 
+
+
+}
+
+@media only screen and (max-width: 920px){
+
+
+  #cuadro_cards_fondo {
+    
+    padding: 0.5px 80px;
+    
+     }
+
+     main {
+      
+      gap: 50px;
+      
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+
+  #cuadro_cards_fondo {
+    
+    padding: 0.5px 100px;
+    
+     }
+
+     main {
+      grid-template-columns: 1fr 1fr ;
+      
+     
+    }
+
+     
+
+} 
+
+
+@media only screen and (max-width: 550px){
+
+  #cuadro_cards_fondo {
+    
+    padding: 0.5px 50px;
+    
+     }
+
+}
+
+@media only screen and (max-width: 415px){
+
+  #cuadro_cards_fondo {
+    
+    padding: 0.5px 50px;
+    
+     }
+
+     main {
+      grid-template-columns: 1fr ;
+      
+      gap: 30px;
+      height: 50%;
+      width: 100%;
+      
+    }
+
+
+    
+#titulo_productos{
+ 
+  font-size: 1rem;
+  padding-left: 100px;
+  width: 180%;
+  
+    
+}
+
 }
